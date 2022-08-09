@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap");
+body {
+  position: relative;
+  margin: 0;
+  background-color: #06005a;
+  background-image: url("background.jpg");
+  background-size: cover;
+  height: 100vh;
+  font-family: "Caveat Brush", cursive;
+}
+#solarSystem {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#mercuryHolder {
+  --distance: 150px;
+  position: absolute;
+  animation: orbit2 8s linear infinite;
+  width: 30px;
+  height: 30px;
+}
+#mercury {
+  --distance: 150px;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(227, 148, 28);
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgb(227, 148, 28);
+
+  transition: 0.5s;
+}
+
+.mercuryText {
+  position: absolute;
+  left: 50px;
+  top: 50px;
+  width: 150px;
+  color: white;
+  padding: 10px;
+  border-radius: 25px;
+  display: none;
+  transition: 2s;
+}
+
+#mercury .cloud1 {
+  position: absolute;
+  left: 30%;
+  background-color: rgb(143, 93, 18);
+  width: 60%;
+  height: 18%;
+  border-radius: 50px;
+}
+#mercury .cloud2 {
+  position: absolute;
+  top: 35%;
+  left: -5%;
+  background-color: rgb(143, 93, 18);
+  width: 50%;
+  height: 20%;
+  border-radius: 50px;
+}
+#mercury .cloud3 {
+  position: absolute;
+  top: 50%;
+  left: -1%;
+  background-color: rgb(143, 93, 18);
+  width: 25%;
+  height: 20%;
+  border-radius: 50px;
+}
+#mercury .cloud4 {
+  position: absolute;
+  top: 70%;
+  left: 45%;
+  background-color: rgb(143, 93, 18);
+  width: 30%;
+  height: 18%;
+  border-radius: 25px;
+}
+
+#mercuryHolder:hover {
+  animation-play-state: paused;
+}
+
+#mercuryHolder:hover #mercury {
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
+  box-shadow: 0 0 20px rgb(227, 148, 28);
+}
+
+#mercuryHolder:hover .mercuryText {
+  display: block;
+}
+
+@keyframes orbit2 {
+  from {
+    transform: rotate(0deg) translateX(var(--distance)) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(var(--distance)) rotate(-360deg);
+  }
+}
