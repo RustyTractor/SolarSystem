@@ -1,0 +1,371 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap");
+
+.earthHolder {
+  --distance: 200px;
+  animation: orbit2 10s linear infinite;
+  height: 100%;
+  width: 100%;
+  transition: 0.6s;
+}
+
+.earth {
+  position: relative;
+  background-color: #0058ab;
+  box-shadow: 0 0 15px #2ebdff;
+  height: 50%;
+  width: 50%;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.earthText {
+  position: absolute;
+  left: 30%;
+  top: 30%;
+  width: 150px;
+  color: white;
+  padding: 10px;
+  border-radius: 25px;
+  display: none;
+  transition: 2s;
+}
+
+.moon .text {
+  position: absolute;
+  left: 100%;
+  top: -200%;
+  width: 150px;
+  color: white;
+  padding: 10px;
+  border-radius: 25px;
+  display: none;
+  transition: 2s;
+}
+
+.earthLands {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  animation: 5s infinite linear landMoving;
+}
+
+.earthLands .land1 {
+  position: absolute;
+  background-color: rgb(5, 120, 5);
+  width: 40%;
+  height: 15%;
+  border-radius: 25rem;
+  top: 10%;
+  left: 5%;
+}
+
+.earthLands .land2 {
+  position: absolute;
+  background-color: rgb(38, 128, 0);
+  width: 25%;
+  height: 10%;
+  border-radius: 25rem;
+  top: 28%;
+  left: 15%;
+}
+.earthLands .land3 {
+  position: absolute;
+  background-color: green;
+  width: 35%;
+  height: 12%;
+  border-radius: 25rem;
+  top: 60%;
+  left: 15%;
+}
+.earthLands .land4 {
+  position: absolute;
+  background-color: green;
+  width: 5%;
+  height: 10%;
+  border-radius: 25rem;
+  top: 70%;
+  left: 35%;
+}
+.earthLands .land5 {
+  position: absolute;
+  background-color: green;
+  width: 40%;
+  height: 8%;
+  border-radius: 25rem;
+  top: 75%;
+  left: 20%;
+}
+.earthLands .land6 {
+  position: absolute;
+  background-color: green;
+  width: 30%;
+  height: 12%;
+  border-radius: 25rem;
+  top: 20%;
+  left: 70%;
+}
+.earthLands .land7 {
+  position: absolute;
+  background-color: rgb(64, 128, 0);
+  width: 35%;
+  height: 20%;
+  border-radius: 25rem;
+  top: 45%;
+  left: 65%;
+}
+.earthLands .land8 {
+  position: absolute;
+  background-color: green;
+  width: 12%;
+  height: 12%;
+  border-radius: 25rem;
+  top: 70%;
+  left: 75%;
+}
+.earthLands .land9 {
+  position: absolute;
+  background-color: rgb(5, 120, 5);
+  width: 40%;
+  height: 15%;
+  border-radius: 25rem;
+  top: 10%;
+  left: -95%;
+}
+.earthLands .land10 {
+  position: absolute;
+  background-color: rgb(38, 128, 0);
+  width: 25%;
+  height: 10%;
+  border-radius: 25rem;
+  top: 28%;
+  left: -85%;
+}
+.earthLands .land11 {
+  position: absolute;
+  background-color: green;
+  width: 35%;
+  height: 12%;
+  border-radius: 25rem;
+  top: 60%;
+  left: -85%;
+}
+.earthLands .land12 {
+  position: absolute;
+  background-color: green;
+  width: 5%;
+  height: 10%;
+  border-radius: 25rem;
+  top: 70%;
+  left: -65%;
+}
+.earthLands .land13 {
+  position: absolute;
+  background-color: green;
+  width: 40%;
+  height: 8%;
+  border-radius: 25rem;
+  top: 75%;
+  left: -80%;
+}
+.earthLands .land14 {
+  position: absolute;
+  background-color: green;
+  width: 30%;
+  height: 12%;
+  border-radius: 25rem;
+  top: 20%;
+  left: -31%;
+}
+.earthLands .land15 {
+  position: absolute;
+  background-color: rgb(64, 128, 0);
+  width: 35%;
+  height: 20%;
+  border-radius: 25rem;
+  top: 45%;
+  left: -35%;
+}
+.earthLands .land16 {
+  position: absolute;
+  background-color: green;
+  width: 12%;
+  height: 12%;
+  border-radius: 25rem;
+  top: 70%;
+  left: -25%;
+}
+
+.earthClouds {
+  position: absolute;
+  z-index: 20;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  animation: 10s infinite linear landMoving;
+}
+
+.earthClouds .cloud1 {
+  position: absolute;
+  background-color: whitesmoke;
+  width: 45%;
+  height: 20%;
+  border-radius: 25rem;
+  top: 12%;
+  left: 5%;
+  opacity: 0.6;
+}
+.earthClouds .cloud2 {
+  position: absolute;
+  background-color: whitesmoke;
+  width: 45%;
+  height: 20%;
+  border-radius: 25rem;
+  top: 12%;
+  left: -95%;
+  opacity: 0.6;
+}
+.earthClouds .cloud3 {
+  position: absolute;
+  background-color: whitesmoke;
+  width: 30%;
+  height: 15%;
+  border-radius: 25rem;
+  top: 50%;
+  left: 25%;
+  opacity: 0.6;
+}
+.earthClouds .cloud4 {
+  position: absolute;
+  background-color: whitesmoke;
+  width: 30%;
+  height: 15%;
+  border-radius: 25rem;
+  top: 50%;
+  left: -75%;
+  opacity: 0.6;
+}
+.earthClouds .cloud5 {
+  position: absolute;
+  background-color: whitesmoke;
+  width: 30%;
+  height: 12%;
+  border-radius: 25rem;
+  top: 70%;
+  left: -10%;
+  opacity: 0.6;
+}
+.earthClouds .cloud6 {
+  position: absolute;
+  background-color: whitesmoke;
+  width: 30%;
+  height: 12%;
+  border-radius: 25rem;
+  top: 70%;
+  left: -110%;
+  opacity: 0.6;
+}
+.moon {
+  position: absolute;
+  background: rgb(159, 159, 159);
+  box-shadow: 0 0 10px rgb(193, 193, 193);
+  width: 20%;
+  height: 20%;
+  border-radius: 50%;
+  top: 20%;
+  left: -40%;
+  z-index: 1;
+  animation: 5s ease-in-out infinite moonMove;
+}
+
+.moon .crater1 {
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  border-radius: 50%;
+  top: 10%;
+  left: 20%;
+  background-color: gray;
+}
+
+.moon .crater2 {
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+  top: 50%;
+  left: 40%;
+  background-color: gray;
+}
+
+.moon .crater3 {
+  position: absolute;
+  width: 22%;
+  height: 22%;
+  border-radius: 50%;
+  top: 20%;
+  left: 60%;
+  background-color: gray;
+}
+
+.moon .crater4 {
+  position: absolute;
+  width: 15%;
+  height: 15%;
+  border-radius: 50%;
+  top: 70%;
+  left: 25%;
+  background-color: gray;
+}
+
+.earthHolder:hover .earthText {
+  display: block;
+}
+
+.earthHolder:hover {
+  animation-play-state: paused;
+  width: 150%;
+  height: 150%;
+}
+
+.moon:hover {
+  animation-play-state: paused;
+}
+.moon:hover .text {
+  display: block;
+}
+
+@keyframes landMoving {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes moonMove {
+  0% {
+    transform: translateX(-20%);
+  }
+  50% {
+    transform: translateX(600%);
+  }
+
+  100% {
+    z-index: 0;
+    transform: translateX(-20%);
+  }
+}
+
+@keyframes orbit2 {
+  from {
+    transform: rotate(0deg) translateX(var(--distance))
+      translateY(var(--distance)) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(var(--distance))
+      translateY(var(--distance)) rotate(-360deg);
+  }
+}
