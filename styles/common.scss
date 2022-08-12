@@ -1,0 +1,68 @@
+@mixin planetHolder() {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin planet($bgColor, $shColor, $size) {
+  position: absolute;
+  background-color: $bgColor;
+  box-shadow: 0 0 15px $shColor;
+  height: $size;
+  width: $size;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+@mixin planetText($posLeft: 30%, $posTop: 30%) {
+  position: absolute;
+  left: $posLeft;
+  top: $posTop;
+  width: 150px;
+  color: white;
+  padding: 10px;
+  display: none;
+}
+
+@mixin planetBlobHolder($opacity: 1, $index: 2) {
+  position: absolute;
+  z-index: $index;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  opacity: $opacity;
+  animation: blobMov 8s linear infinite;
+}
+
+@mixin planetBlobs($w, $h, $posLeft, $posTop, $color) {
+  position: absolute;
+  background-color: $color;
+  width: $w;
+  height: $h;
+  border-radius: 25rem;
+  top: $posTop;
+  left: $posLeft;
+}
+
+@keyframes blobMov {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@mixin circulation_mixin($distance) {
+  @keyframes circulation {
+    from {
+      transform: rotate(0deg) translateX($distance) translateY($distance)
+        rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg) translateX($distance) translateY($distance)
+        rotate(-360deg);
+    }
+  }
+}

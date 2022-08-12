@@ -1,15 +1,30 @@
-@import url("https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap");
-
+@keyframes blobMov {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
 .earthHolder {
-  --distance: 200px;
-  animation: orbit2 10s linear infinite;
-  height: 100%;
+  position: absolute;
   width: 100%;
+  height: 100%;
+  animation: circulation 8s linear infinite;
   transition: 0.6s;
+}
+.earthHolder:hover .earthText {
+  display: block;
+}
+
+.earthHolder:hover {
+  animation-play-state: paused;
+  height: 150%;
+  width: 150%;
 }
 
 .earth {
-  position: relative;
+  position: absolute;
   background-color: #0058ab;
   box-shadow: 0 0 15px #2ebdff;
   height: 50%;
@@ -26,9 +41,7 @@
   width: 150px;
   color: white;
   padding: 10px;
-  border-radius: 25px;
   display: none;
-  transition: 2s;
 }
 
 .moon .text {
@@ -38,17 +51,17 @@
   width: 150px;
   color: white;
   padding: 10px;
-  border-radius: 25px;
   display: none;
-  transition: 2s;
 }
 
 .earthLands {
   position: absolute;
+  z-index: 2;
   height: 100%;
   width: 100%;
   border-radius: 50%;
-  animation: 5s infinite linear landMoving;
+  opacity: 1;
+  animation: blobMov 8s linear infinite;
 }
 
 .earthLands .land1 {
@@ -70,6 +83,7 @@
   top: 28%;
   left: 15%;
 }
+
 .earthLands .land3 {
   position: absolute;
   background-color: green;
@@ -79,6 +93,7 @@
   top: 60%;
   left: 15%;
 }
+
 .earthLands .land4 {
   position: absolute;
   background-color: green;
@@ -88,6 +103,7 @@
   top: 70%;
   left: 35%;
 }
+
 .earthLands .land5 {
   position: absolute;
   background-color: green;
@@ -97,6 +113,7 @@
   top: 75%;
   left: 20%;
 }
+
 .earthLands .land6 {
   position: absolute;
   background-color: green;
@@ -106,6 +123,7 @@
   top: 20%;
   left: 70%;
 }
+
 .earthLands .land7 {
   position: absolute;
   background-color: rgb(64, 128, 0);
@@ -115,6 +133,7 @@
   top: 45%;
   left: 65%;
 }
+
 .earthLands .land8 {
   position: absolute;
   background-color: green;
@@ -124,6 +143,7 @@
   top: 70%;
   left: 75%;
 }
+
 .earthLands .land9 {
   position: absolute;
   background-color: rgb(5, 120, 5);
@@ -133,6 +153,7 @@
   top: 10%;
   left: -95%;
 }
+
 .earthLands .land10 {
   position: absolute;
   background-color: rgb(38, 128, 0);
@@ -142,6 +163,7 @@
   top: 28%;
   left: -85%;
 }
+
 .earthLands .land11 {
   position: absolute;
   background-color: green;
@@ -151,6 +173,7 @@
   top: 60%;
   left: -85%;
 }
+
 .earthLands .land12 {
   position: absolute;
   background-color: green;
@@ -160,6 +183,7 @@
   top: 70%;
   left: -65%;
 }
+
 .earthLands .land13 {
   position: absolute;
   background-color: green;
@@ -169,6 +193,7 @@
   top: 75%;
   left: -80%;
 }
+
 .earthLands .land14 {
   position: absolute;
   background-color: green;
@@ -176,8 +201,9 @@
   height: 12%;
   border-radius: 25rem;
   top: 20%;
-  left: -31%;
+  left: -30%;
 }
+
 .earthLands .land15 {
   position: absolute;
   background-color: rgb(64, 128, 0);
@@ -187,6 +213,7 @@
   top: 45%;
   left: -35%;
 }
+
 .earthLands .land16 {
   position: absolute;
   background-color: green;
@@ -199,11 +226,12 @@
 
 .earthClouds {
   position: absolute;
-  z-index: 20;
+  z-index: 3;
   height: 100%;
   width: 100%;
   border-radius: 50%;
-  animation: 10s infinite linear landMoving;
+  opacity: 0.6;
+  animation: blobMov 8s linear infinite;
 }
 
 .earthClouds .cloud1 {
@@ -214,8 +242,8 @@
   border-radius: 25rem;
   top: 12%;
   left: 5%;
-  opacity: 0.6;
 }
+
 .earthClouds .cloud2 {
   position: absolute;
   background-color: whitesmoke;
@@ -224,8 +252,8 @@
   border-radius: 25rem;
   top: 12%;
   left: -95%;
-  opacity: 0.6;
 }
+
 .earthClouds .cloud3 {
   position: absolute;
   background-color: whitesmoke;
@@ -234,8 +262,8 @@
   border-radius: 25rem;
   top: 50%;
   left: 25%;
-  opacity: 0.6;
 }
+
 .earthClouds .cloud4 {
   position: absolute;
   background-color: whitesmoke;
@@ -244,8 +272,8 @@
   border-radius: 25rem;
   top: 50%;
   left: -75%;
-  opacity: 0.6;
 }
+
 .earthClouds .cloud5 {
   position: absolute;
   background-color: whitesmoke;
@@ -254,8 +282,8 @@
   border-radius: 25rem;
   top: 70%;
   left: -10%;
-  opacity: 0.6;
 }
+
 .earthClouds .cloud6 {
   position: absolute;
   background-color: whitesmoke;
@@ -264,85 +292,60 @@
   border-radius: 25rem;
   top: 70%;
   left: -110%;
-  opacity: 0.6;
 }
+
 .moon {
   position: absolute;
-  background: rgb(159, 159, 159);
-  box-shadow: 0 0 10px rgb(193, 193, 193);
-  width: 20%;
+  background-color: rgb(159, 159, 159);
+  box-shadow: 0 0 15px rgb(193, 193, 193);
   height: 20%;
+  width: 20%;
   border-radius: 50%;
+  overflow: hidden;
+  z-index: 1;
   top: 20%;
   left: -40%;
-  z-index: 1;
   animation: 5s ease-in-out infinite moonMove;
 }
 
 .moon .crater1 {
   position: absolute;
+  background-color: gray;
   width: 20%;
   height: 20%;
-  border-radius: 50%;
+  border-radius: 25rem;
   top: 10%;
   left: 20%;
-  background-color: gray;
 }
 
 .moon .crater2 {
   position: absolute;
+  background-color: gray;
   width: 30%;
   height: 30%;
-  border-radius: 50%;
+  border-radius: 25rem;
   top: 50%;
   left: 40%;
-  background-color: gray;
 }
 
 .moon .crater3 {
   position: absolute;
+  background-color: gray;
   width: 22%;
   height: 22%;
-  border-radius: 50%;
+  border-radius: 25rem;
   top: 20%;
   left: 60%;
-  background-color: gray;
 }
 
 .moon .crater4 {
   position: absolute;
+  background-color: gray;
   width: 15%;
   height: 15%;
-  border-radius: 50%;
+  border-radius: 25rem;
   top: 70%;
   left: 25%;
-  background-color: gray;
-}
-
-.earthHolder:hover .earthText {
-  display: block;
-}
-
-.earthHolder:hover {
-  animation-play-state: paused;
-  width: 150%;
-  height: 150%;
-}
-
-.moon:hover {
-  animation-play-state: paused;
-}
-.moon:hover .text {
-  display: block;
-}
-
-@keyframes landMoving {
-  from {
-    transform: translateX(0%);
-  }
-  to {
-    transform: translateX(100%);
-  }
 }
 
 @keyframes moonMove {
@@ -352,20 +355,18 @@
   50% {
     transform: translateX(600%);
   }
-
   100% {
     z-index: 0;
     transform: translateX(-20%);
   }
 }
-
-@keyframes orbit2 {
+@keyframes circulation {
   from {
-    transform: rotate(0deg) translateX(var(--distance))
-      translateY(var(--distance)) rotate(0deg);
+    transform: rotate(0deg) translateX(200px) translateY(200px) rotate(0deg);
   }
   to {
-    transform: rotate(360deg) translateX(var(--distance))
-      translateY(var(--distance)) rotate(-360deg);
+    transform: rotate(360deg) translateX(200px) translateY(200px) rotate(-360deg);
   }
 }
+
+/*# sourceMappingURL=earthStyle.css.map */

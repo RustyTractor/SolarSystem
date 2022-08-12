@@ -1,0 +1,138 @@
+@import "common.scss";
+
+.earthHolder {
+  &:hover .earthText {
+    display: block;
+  }
+
+  @include planetHolder();
+
+  animation: circulation 8s linear infinite;
+  transition: 0.6s;
+}
+
+.earthHolder:hover {
+  animation-play-state: paused;
+  height: 150%;
+  width: 150%;
+}
+.earth {
+  @include planet(#0058ab, #2ebdff, 50%);
+}
+.earthText {
+  @include planetText(30%, 30%);
+}
+.moon .text {
+  @include planetText(100%, -200%);
+}
+.earthLands {
+  @include planetBlobHolder();
+}
+
+.earthLands .land1 {
+  @include planetBlobs(40%, 15%, 5%, 10%, rgb(5, 120, 5));
+}
+.earthLands .land2 {
+  @include planetBlobs(25%, 10%, 15%, 28%, rgb(38, 128, 0));
+}
+.earthLands .land3 {
+  @include planetBlobs(35%, 12%, 15%, 60%, green);
+}
+.earthLands .land4 {
+  @include planetBlobs(5%, 10%, 35%, 70%, green);
+}
+.earthLands .land5 {
+  @include planetBlobs(40%, 8%, 20%, 75%, green);
+}
+.earthLands .land6 {
+  @include planetBlobs(30%, 12%, 70%, 20%, green);
+}
+.earthLands .land7 {
+  @include planetBlobs(35%, 20%, 65%, 45%, rgb(64, 128, 0));
+}
+.earthLands .land8 {
+  @include planetBlobs(12%, 12%, 75%, 70%, green);
+}
+.earthLands .land9 {
+  @include planetBlobs(40%, 15%, -95%, 10%, rgb(5, 120, 5));
+}
+.earthLands .land10 {
+  @include planetBlobs(25%, 10%, -85%, 28%, rgb(38, 128, 0));
+}
+.earthLands .land11 {
+  @include planetBlobs(35%, 12%, -85%, 60%, green);
+}
+.earthLands .land12 {
+  @include planetBlobs(5%, 10%, -65%, 70%, green);
+}
+.earthLands .land13 {
+  @include planetBlobs(40%, 8%, -80%, 75%, green);
+}
+.earthLands .land14 {
+  @include planetBlobs(30%, 12%, -30%, 20%, green);
+}
+.earthLands .land15 {
+  @include planetBlobs(35%, 20%, -35%, 45%, rgb(64, 128, 0));
+}
+.earthLands .land16 {
+  @include planetBlobs(12%, 12%, -25%, 70%, green);
+}
+
+.earthClouds {
+  @include planetBlobHolder(0.6, 3);
+}
+
+.earthClouds .cloud1 {
+  @include planetBlobs(45%, 20%, 5%, 12%, whitesmoke);
+}
+.earthClouds .cloud2 {
+  @include planetBlobs(45%, 20%, -95%, 12%, whitesmoke);
+}
+.earthClouds .cloud3 {
+  @include planetBlobs(30%, 15%, 25%, 50%, whitesmoke);
+}
+.earthClouds .cloud4 {
+  @include planetBlobs(30%, 15%, -75%, 50%, whitesmoke);
+}
+.earthClouds .cloud5 {
+  @include planetBlobs(30%, 12%, -10%, 70%, whitesmoke);
+}
+.earthClouds .cloud6 {
+  @include planetBlobs(30%, 12%, -110%, 70%, whitesmoke);
+}
+
+.moon {
+  @include planet(rgb(159, 159, 159), rgb(193, 193, 193), 20%);
+  top: 20%;
+  left: -40%;
+  animation: 5s ease-in-out infinite moonMove;
+}
+
+.moon .crater1 {
+  @include planetBlobs(20%, 20%, 20%, 10%, gray);
+}
+.moon .crater2 {
+  @include planetBlobs(30%, 30%, 40%, 50%, gray);
+}
+.moon .crater3 {
+  @include planetBlobs(22%, 22%, 60%, 20%, gray);
+}
+.moon .crater4 {
+  @include planetBlobs(15%, 15%, 25%, 70%, gray);
+}
+
+@keyframes moonMove {
+  0% {
+    transform: translateX(-20%);
+  }
+  50% {
+    transform: translateX(600%);
+  }
+
+  100% {
+    z-index: 0;
+    transform: translateX(-20%);
+  }
+}
+
+@include circulation_mixin(200px);
