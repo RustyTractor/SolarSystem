@@ -1,0 +1,24 @@
+.stars {
+  min-height: 100vh;
+}
+
+.star {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+@for $i from 1 through 100 {
+  .stars div:nth-child(#{$i}) {
+    $randomSize: random(
+        $limit: 3,
+      ) +
+      px;
+    top: random($limit: 1000) + px;
+    left: random($limit: 2000) + px;
+    height: $randomSize;
+    width: $randomSize;
+  }
+}

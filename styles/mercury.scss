@@ -20,7 +20,7 @@
 }
 
 .mercuryText {
-  @include planetText();
+  @include planetText(80%, 0%);
 }
 
 .mercuryClouds {

@@ -20,7 +20,7 @@
 }
 
 .venusText {
-  @include planetText();
+  @include planetText(80%, 0%);
 }
 
 .venusClouds {

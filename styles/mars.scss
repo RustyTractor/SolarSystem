@@ -1,0 +1,56 @@
+@import "common.scss";
+
+.marsHolder {
+  &:hover {
+    animation-play-state: paused;
+  }
+  @include planetHolder();
+  animation: circulationMars 12s linear infinite;
+}
+.marsHolder:hover .mars {
+  width: 80%;
+  height: 80%;
+}
+.marsHolder:hover .marsText {
+  display: block;
+}
+
+.mars {
+  @include planet(rgb(225, 80, 2), rgb(224, 96, 27), 40%);
+}
+
+.marsText {
+  @include planetText(100%, 0%);
+}
+
+.marsClouds {
+  @include planetBlobHolder();
+}
+
+.mars .cloud1 {
+  @include planetBlobs(25%, 20%, 30%, 20%, rgb(189, 66, 13));
+}
+.mars .cloud2 {
+  @include planetBlobs(25%, 20%, -70%, 20%, rgb(189, 51, 13));
+}
+.mars .cloud3 {
+  @include planetBlobs(36%, 18%, 0%, 45%, rgb(189, 66, 13));
+}
+.mars .cloud4 {
+  @include planetBlobs(36%, 18%, -100%, 45%, rgb(189, 51, 13));
+}
+.mars .cloud5 {
+  @include planetBlobs(50%, 15%, 50%, 70%, rgb(189, 66, 13));
+}
+.mars .cloud6 {
+  @include planetBlobs(50%, 15%, -50%, 70%, rgb(189, 51, 13));
+}
+
+@keyframes circulationMars {
+  from {
+    transform: rotate(0deg) translateX(270%) translateY(270%) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(270%) translateY(270%) rotate(-360deg);
+  }
+}
