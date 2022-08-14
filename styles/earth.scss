@@ -1,26 +1,30 @@
 @import "common.scss";
 
 .earthHolder {
-  &:hover .earthText {
-    display: block;
+  &:hover {
+    animation-play-state: paused;
   }
 
   @include planetHolder();
-
-  animation: circulationEarth 8s linear infinite;
-  transition: 0.6s;
+  animation: circulationEarth 10.5s linear infinite;
+}
+.earthHolder:hover .earth {
+  width: 100%;
+  height: 100%;
+}
+.earthHolder:hover .moon {
+  width: 40%;
+  height: 40%;
 }
 
-.earthHolder:hover {
-  animation-play-state: paused;
-  height: 150%;
-  width: 150%;
+.earthHolder:hover .earthText {
+  display: block;
 }
 .earth {
   @include planet(#0058ab, #2ebdff, 50%);
 }
 .earthText {
-  @include planetText(30%, 30%);
+  @include planetText(60%, 60%);
 }
 .moon .text {
   @include planetText(100%, -200%);
@@ -103,9 +107,11 @@
 
 .moon {
   @include planet(rgb(159, 159, 159), rgb(193, 193, 193), 20%);
-  top: 20%;
-  left: -40%;
   animation: 5s ease-in-out infinite moonMove;
+}
+
+.moon:hover {
+  animation-play-state: paused;
 }
 
 .moon .crater1 {
@@ -123,24 +129,23 @@
 
 @keyframes moonMove {
   0% {
-    transform: translateX(-20%);
+    transform: translateX(-150%);
   }
   50% {
-    transform: translateX(600%);
+    transform: translateX(300%);
   }
 
   100% {
     z-index: 0;
-    transform: translateX(-20%);
+    transform: translateX(-150%);
   }
 }
 
 @keyframes circulationEarth {
   from {
-    transform: rotate(0deg) translateX(130px) translateY(130px) rotate(0deg);
+    transform: rotate(0deg) translateX(200%) translateY(200%) rotate(0deg);
   }
   to {
-    transform: rotate(360deg) translateX(130px) translateY(130px)
-      rotate(-360deg);
+    transform: rotate(360deg) translateX(200%) translateY(200%) rotate(-360deg);
   }
 }

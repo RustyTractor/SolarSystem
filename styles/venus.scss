@@ -1,0 +1,79 @@
+@import "common.scss";
+
+.venusHolder {
+  &:hover {
+    animation-play-state: paused;
+  }
+  @include planetHolder();
+  animation: circulationVenus 9s linear infinite;
+}
+.venusHolder:hover .venus {
+  width: 80%;
+  height: 80%;
+}
+.venusHolder:hover .venusText {
+  display: block;
+}
+
+.venus {
+  @include planet(rgb(227, 131, 28), rgb(227, 124, 28), 35%);
+}
+
+.venusText {
+  @include planetText();
+}
+
+.venusClouds {
+  @include planetBlobHolder();
+}
+
+.venus .cloud1 {
+  @include planetBlobs(80%, 15%, 0%, 5%, rgb(204, 92, 23));
+}
+.venus .cloud2 {
+  @include planetBlobs(60%, 20%, 35%, 30%, rgb(204, 92, 23));
+}
+.venus .cloud3 {
+  @include planetBlobs(40%, 20%, 15%, 40%, rgb(204, 92, 23));
+}
+
+.venus .cloud4 {
+  @include planetBlobs(40%, 30%, 40%, 80%, rgb(204, 92, 23));
+}
+
+.venus .cloud5 {
+  @include planetBlobs(80%, 15%, -100%, 5%, rgb(204, 92, 23));
+}
+.venus .cloud6 {
+  @include planetBlobs(60%, 20%, -65%, 30%, rgb(204, 92, 23));
+}
+.venus .cloud7 {
+  @include planetBlobs(40%, 20%, -85%, 40%, rgb(204, 92, 23));
+}
+
+.venus .cloud8 {
+  @include planetBlobs(40%, 30%, -60%, 80%, rgb(204, 92, 23));
+}
+
+.venus .cloud9 {
+  @include planetBlobs(15%, 15%, 10%, 65%, rgb(171, 79, 21));
+}
+.venus .cloud10 {
+  @include planetBlobs(15%, 15%, -90%, 65%, rgb(171, 79, 21));
+}
+.venus .cloud11 {
+  @include planetBlobs(40%, 20%, -85%, 40%, rgb(204, 92, 23));
+}
+
+.venus .cloud12 {
+  @include planetBlobs(40%, 30%, -60%, 80%, rgb(204, 92, 23));
+}
+
+@keyframes circulationVenus {
+  from {
+    transform: rotate(0deg) translateX(120%) translateY(120%) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(120%) translateY(120%) rotate(-360deg);
+  }
+}

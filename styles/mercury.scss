@@ -3,11 +3,13 @@
 .mercuryHolder {
   &:hover {
     animation-play-state: paused;
-    width: 200%;
-    height: 200%;
   }
   @include planetHolder();
   animation: circulationMercury 8s linear infinite;
+}
+.mercuryHolder:hover .mercury {
+  width: 80%;
+  height: 80%;
 }
 .mercuryHolder:hover .mercuryText {
   display: block;
@@ -66,9 +68,9 @@
 
 @keyframes circulationMercury {
   from {
-    transform: rotate(0deg) translateX(80px) translateY(80px) rotate(0deg);
+    transform: rotate(0deg) translateX(80%) translateY(80%) rotate(0deg);
   }
   to {
-    transform: rotate(360deg) translateX(80px) translateY(80px) rotate(-360deg);
+    transform: rotate(360deg) translateX(80%) translateY(80%) rotate(-360deg);
   }
 }

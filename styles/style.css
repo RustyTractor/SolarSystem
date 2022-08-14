@@ -1,0 +1,811 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap");
+@keyframes blobMov {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+.mercuryHolder {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  animation: circulationMercury 8s linear infinite;
+}
+.mercuryHolder:hover {
+  animation-play-state: paused;
+}
+
+.mercuryHolder:hover .mercury {
+  width: 80%;
+  height: 80%;
+}
+
+.mercuryHolder:hover .mercuryText {
+  display: block;
+}
+
+.mercury {
+  position: absolute;
+  background-color: rgb(227, 148, 28);
+  box-shadow: 0 0 15px rgb(227, 148, 28);
+  height: 30%;
+  width: 30%;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 1;
+  transition: 0.6s;
+}
+
+.mercuryText {
+  position: absolute;
+  left: 30%;
+  top: 30%;
+  width: 150px;
+  color: white;
+  padding: 10px;
+  display: none;
+}
+
+.mercuryClouds {
+  position: absolute;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  opacity: 1;
+  animation: blobMov 8s linear infinite;
+}
+
+.mercury .cloud1 {
+  position: absolute;
+  background-color: rgb(143, 93, 18);
+  width: 60%;
+  height: 18%;
+  border-radius: 25rem;
+  top: 0%;
+  left: 30%;
+}
+
+.mercury .cloud2 {
+  position: absolute;
+  background-color: rgb(143, 93, 18);
+  width: 50%;
+  height: 20%;
+  border-radius: 25rem;
+  top: 35%;
+  left: -5%;
+}
+
+.mercury .cloud3 {
+  position: absolute;
+  background-color: rgb(143, 93, 18);
+  width: 25%;
+  height: 20%;
+  border-radius: 25rem;
+  top: 50%;
+  left: -1%;
+}
+
+.mercury .cloud4 {
+  position: absolute;
+  background-color: rgb(143, 93, 18);
+  width: 30%;
+  height: 18%;
+  border-radius: 25rem;
+  top: 70%;
+  left: 45%;
+}
+
+.mercury .cloud5 {
+  position: absolute;
+  background-color: rgb(143, 93, 18);
+  width: 60%;
+  height: 18%;
+  border-radius: 25rem;
+  top: 0%;
+  left: -70%;
+}
+
+.mercury .cloud6 {
+  position: absolute;
+  background-color: rgb(143, 93, 18);
+  width: 50%;
+  height: 20%;
+  border-radius: 25rem;
+  top: 35%;
+  left: -105%;
+}
+
+.mercury .cloud7 {
+  position: absolute;
+  background-color: rgb(143, 93, 18);
+  width: 25%;
+  height: 20%;
+  border-radius: 25rem;
+  top: 50%;
+  left: -101%;
+}
+
+.mercury .cloud8 {
+  position: absolute;
+  background-color: rgb(143, 93, 18);
+  width: 30%;
+  height: 18%;
+  border-radius: 25rem;
+  top: 70%;
+  left: -55%;
+}
+
+.mercury .cloud9 {
+  position: absolute;
+  background-color: rgb(117, 76, 16);
+  width: 20%;
+  height: 10%;
+  border-radius: 25rem;
+  top: 50%;
+  left: 50%;
+}
+
+.mercury .cloud10 {
+  position: absolute;
+  background-color: rgb(117, 76, 16);
+  width: 20%;
+  height: 10%;
+  border-radius: 25rem;
+  top: 50%;
+  left: -50%;
+}
+
+.mercury .cloud11 {
+  position: absolute;
+  background-color: rgb(116, 76, 15);
+  width: 20%;
+  height: 18%;
+  border-radius: 25rem;
+  top: 80%;
+  left: 80%;
+}
+
+.mercury .cloud12 {
+  position: absolute;
+  background-color: rgb(116, 76, 15);
+  width: 20%;
+  height: 12%;
+  border-radius: 25rem;
+  top: 80%;
+  left: -20%;
+}
+
+@keyframes circulationMercury {
+  from {
+    transform: rotate(0deg) translateX(80%) translateY(80%) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(80%) translateY(80%) rotate(-360deg);
+  }
+}
+@keyframes blobMov {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+.earthHolder {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  animation: circulationEarth 10.5s linear infinite;
+}
+.earthHolder:hover {
+  animation-play-state: paused;
+}
+
+.earthHolder:hover .earth {
+  width: 100%;
+  height: 100%;
+}
+
+.earthHolder:hover .moon {
+  width: 40%;
+  height: 40%;
+}
+
+.earthHolder:hover .earthText {
+  display: block;
+}
+
+.earth {
+  position: absolute;
+  background-color: #0058ab;
+  box-shadow: 0 0 15px #2ebdff;
+  height: 50%;
+  width: 50%;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 1;
+  transition: 0.6s;
+}
+
+.earthText {
+  position: absolute;
+  left: 60%;
+  top: 60%;
+  width: 150px;
+  color: white;
+  padding: 10px;
+  display: none;
+}
+
+.moon .text {
+  position: absolute;
+  left: 100%;
+  top: -200%;
+  width: 150px;
+  color: white;
+  padding: 10px;
+  display: none;
+}
+
+.earthLands {
+  position: absolute;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  opacity: 1;
+  animation: blobMov 8s linear infinite;
+}
+
+.earthLands .land1 {
+  position: absolute;
+  background-color: rgb(5, 120, 5);
+  width: 40%;
+  height: 15%;
+  border-radius: 25rem;
+  top: 10%;
+  left: 5%;
+}
+
+.earthLands .land2 {
+  position: absolute;
+  background-color: rgb(38, 128, 0);
+  width: 25%;
+  height: 10%;
+  border-radius: 25rem;
+  top: 28%;
+  left: 15%;
+}
+
+.earthLands .land3 {
+  position: absolute;
+  background-color: green;
+  width: 35%;
+  height: 12%;
+  border-radius: 25rem;
+  top: 60%;
+  left: 15%;
+}
+
+.earthLands .land4 {
+  position: absolute;
+  background-color: green;
+  width: 5%;
+  height: 10%;
+  border-radius: 25rem;
+  top: 70%;
+  left: 35%;
+}
+
+.earthLands .land5 {
+  position: absolute;
+  background-color: green;
+  width: 40%;
+  height: 8%;
+  border-radius: 25rem;
+  top: 75%;
+  left: 20%;
+}
+
+.earthLands .land6 {
+  position: absolute;
+  background-color: green;
+  width: 30%;
+  height: 12%;
+  border-radius: 25rem;
+  top: 20%;
+  left: 70%;
+}
+
+.earthLands .land7 {
+  position: absolute;
+  background-color: rgb(64, 128, 0);
+  width: 35%;
+  height: 20%;
+  border-radius: 25rem;
+  top: 45%;
+  left: 65%;
+}
+
+.earthLands .land8 {
+  position: absolute;
+  background-color: green;
+  width: 12%;
+  height: 12%;
+  border-radius: 25rem;
+  top: 70%;
+  left: 75%;
+}
+
+.earthLands .land9 {
+  position: absolute;
+  background-color: rgb(5, 120, 5);
+  width: 40%;
+  height: 15%;
+  border-radius: 25rem;
+  top: 10%;
+  left: -95%;
+}
+
+.earthLands .land10 {
+  position: absolute;
+  background-color: rgb(38, 128, 0);
+  width: 25%;
+  height: 10%;
+  border-radius: 25rem;
+  top: 28%;
+  left: -85%;
+}
+
+.earthLands .land11 {
+  position: absolute;
+  background-color: green;
+  width: 35%;
+  height: 12%;
+  border-radius: 25rem;
+  top: 60%;
+  left: -85%;
+}
+
+.earthLands .land12 {
+  position: absolute;
+  background-color: green;
+  width: 5%;
+  height: 10%;
+  border-radius: 25rem;
+  top: 70%;
+  left: -65%;
+}
+
+.earthLands .land13 {
+  position: absolute;
+  background-color: green;
+  width: 40%;
+  height: 8%;
+  border-radius: 25rem;
+  top: 75%;
+  left: -80%;
+}
+
+.earthLands .land14 {
+  position: absolute;
+  background-color: green;
+  width: 30%;
+  height: 12%;
+  border-radius: 25rem;
+  top: 20%;
+  left: -30%;
+}
+
+.earthLands .land15 {
+  position: absolute;
+  background-color: rgb(64, 128, 0);
+  width: 35%;
+  height: 20%;
+  border-radius: 25rem;
+  top: 45%;
+  left: -35%;
+}
+
+.earthLands .land16 {
+  position: absolute;
+  background-color: green;
+  width: 12%;
+  height: 12%;
+  border-radius: 25rem;
+  top: 70%;
+  left: -25%;
+}
+
+.earthClouds {
+  position: absolute;
+  z-index: 3;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: blobMov 8s linear infinite;
+}
+
+.earthClouds .cloud1 {
+  position: absolute;
+  background-color: whitesmoke;
+  width: 45%;
+  height: 20%;
+  border-radius: 25rem;
+  top: 12%;
+  left: 5%;
+}
+
+.earthClouds .cloud2 {
+  position: absolute;
+  background-color: whitesmoke;
+  width: 45%;
+  height: 20%;
+  border-radius: 25rem;
+  top: 12%;
+  left: -95%;
+}
+
+.earthClouds .cloud3 {
+  position: absolute;
+  background-color: whitesmoke;
+  width: 30%;
+  height: 15%;
+  border-radius: 25rem;
+  top: 50%;
+  left: 25%;
+}
+
+.earthClouds .cloud4 {
+  position: absolute;
+  background-color: whitesmoke;
+  width: 30%;
+  height: 15%;
+  border-radius: 25rem;
+  top: 50%;
+  left: -75%;
+}
+
+.earthClouds .cloud5 {
+  position: absolute;
+  background-color: whitesmoke;
+  width: 30%;
+  height: 12%;
+  border-radius: 25rem;
+  top: 70%;
+  left: -10%;
+}
+
+.earthClouds .cloud6 {
+  position: absolute;
+  background-color: whitesmoke;
+  width: 30%;
+  height: 12%;
+  border-radius: 25rem;
+  top: 70%;
+  left: -110%;
+}
+
+.moon {
+  position: absolute;
+  background-color: rgb(159, 159, 159);
+  box-shadow: 0 0 15px rgb(193, 193, 193);
+  height: 20%;
+  width: 20%;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 1;
+  transition: 0.6s;
+  animation: 5s ease-in-out infinite moonMove;
+}
+
+.moon:hover {
+  animation-play-state: paused;
+}
+
+.moon .crater1 {
+  position: absolute;
+  background-color: gray;
+  width: 20%;
+  height: 20%;
+  border-radius: 25rem;
+  top: 10%;
+  left: 20%;
+}
+
+.moon .crater2 {
+  position: absolute;
+  background-color: gray;
+  width: 30%;
+  height: 30%;
+  border-radius: 25rem;
+  top: 50%;
+  left: 40%;
+}
+
+.moon .crater3 {
+  position: absolute;
+  background-color: gray;
+  width: 22%;
+  height: 22%;
+  border-radius: 25rem;
+  top: 20%;
+  left: 60%;
+}
+
+.moon .crater4 {
+  position: absolute;
+  background-color: gray;
+  width: 15%;
+  height: 15%;
+  border-radius: 25rem;
+  top: 70%;
+  left: 25%;
+}
+
+@keyframes moonMove {
+  0% {
+    transform: translateX(-150%);
+  }
+  50% {
+    transform: translateX(300%);
+  }
+  100% {
+    z-index: 0;
+    transform: translateX(-150%);
+  }
+}
+@keyframes circulationEarth {
+  from {
+    transform: rotate(0deg) translateX(200%) translateY(200%) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(200%) translateY(200%) rotate(-360deg);
+  }
+}
+@keyframes blobMov {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+.venusHolder {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  animation: circulationVenus 9s linear infinite;
+}
+.venusHolder:hover {
+  animation-play-state: paused;
+}
+
+.venusHolder:hover .venus {
+  width: 80%;
+  height: 80%;
+}
+
+.venusHolder:hover .venusText {
+  display: block;
+}
+
+.venus {
+  position: absolute;
+  background-color: rgb(227, 131, 28);
+  box-shadow: 0 0 15px rgb(227, 124, 28);
+  height: 35%;
+  width: 35%;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 1;
+  transition: 0.6s;
+}
+
+.venusText {
+  position: absolute;
+  left: 30%;
+  top: 30%;
+  width: 150px;
+  color: white;
+  padding: 10px;
+  display: none;
+}
+
+.venusClouds {
+  position: absolute;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  opacity: 1;
+  animation: blobMov 8s linear infinite;
+}
+
+.venus .cloud1 {
+  position: absolute;
+  background-color: rgb(204, 92, 23);
+  width: 80%;
+  height: 15%;
+  border-radius: 25rem;
+  top: 5%;
+  left: 0%;
+}
+
+.venus .cloud2 {
+  position: absolute;
+  background-color: rgb(204, 92, 23);
+  width: 60%;
+  height: 20%;
+  border-radius: 25rem;
+  top: 30%;
+  left: 35%;
+}
+
+.venus .cloud3 {
+  position: absolute;
+  background-color: rgb(204, 92, 23);
+  width: 40%;
+  height: 20%;
+  border-radius: 25rem;
+  top: 40%;
+  left: 15%;
+}
+
+.venus .cloud4 {
+  position: absolute;
+  background-color: rgb(204, 92, 23);
+  width: 40%;
+  height: 30%;
+  border-radius: 25rem;
+  top: 80%;
+  left: 40%;
+}
+
+.venus .cloud5 {
+  position: absolute;
+  background-color: rgb(204, 92, 23);
+  width: 80%;
+  height: 15%;
+  border-radius: 25rem;
+  top: 5%;
+  left: -100%;
+}
+
+.venus .cloud6 {
+  position: absolute;
+  background-color: rgb(204, 92, 23);
+  width: 60%;
+  height: 20%;
+  border-radius: 25rem;
+  top: 30%;
+  left: -65%;
+}
+
+.venus .cloud7 {
+  position: absolute;
+  background-color: rgb(204, 92, 23);
+  width: 40%;
+  height: 20%;
+  border-radius: 25rem;
+  top: 40%;
+  left: -85%;
+}
+
+.venus .cloud8 {
+  position: absolute;
+  background-color: rgb(204, 92, 23);
+  width: 40%;
+  height: 30%;
+  border-radius: 25rem;
+  top: 80%;
+  left: -60%;
+}
+
+.venus .cloud9 {
+  position: absolute;
+  background-color: rgb(171, 79, 21);
+  width: 15%;
+  height: 15%;
+  border-radius: 25rem;
+  top: 65%;
+  left: 10%;
+}
+
+.venus .cloud10 {
+  position: absolute;
+  background-color: rgb(171, 79, 21);
+  width: 15%;
+  height: 15%;
+  border-radius: 25rem;
+  top: 65%;
+  left: -90%;
+}
+
+.venus .cloud11 {
+  position: absolute;
+  background-color: rgb(204, 92, 23);
+  width: 40%;
+  height: 20%;
+  border-radius: 25rem;
+  top: 40%;
+  left: -85%;
+}
+
+.venus .cloud12 {
+  position: absolute;
+  background-color: rgb(204, 92, 23);
+  width: 40%;
+  height: 30%;
+  border-radius: 25rem;
+  top: 80%;
+  left: -60%;
+}
+
+@keyframes circulationVenus {
+  from {
+    transform: rotate(0deg) translateX(120%) translateY(120%) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(120%) translateY(120%) rotate(-360deg);
+  }
+}
+body {
+  position: relative;
+  margin: 0;
+  background-size: cover;
+  height: 100vh;
+  font-family: "Caveat Brush", cursive;
+  overflow: hidden;
+  background: radial-gradient(#0c0065, #000000);
+}
+
+.orbit {
+  position: absolute;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+#solarSystem {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sun-outline {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  box-shadow: 0 0 30px rgb(254, 254, 150);
+  border: 2px solid rgb(255, 162, 0);
+  background-color: rgb(255, 210, 75);
+}
+
+.sun-inline {
+  position: absolute;
+  width: 40%;
+  height: 40%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  box-shadow: 0 0 40px rgb(255, 64, 0);
+  background-color: orange;
+  border: 15px solid orange;
+  opacity: 0.3;
+}
+
+/*# sourceMappingURL=style.css.map */
