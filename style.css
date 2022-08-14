@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap");
-@import "./styles/EarthStyle.css";
+
+@import "./styles/mercury.css";
+@import "./styles/earth.css";
+
 body {
   position: relative;
   margin: 0;
-  background: radial-gradient(#0c0065, #000000);
   background-size: cover;
   height: 100vh;
   font-family: "Caveat Brush", cursive;
@@ -11,7 +13,10 @@ body {
 }
 
 .orbit {
+  position: relative;
   overflow: hidden;
+  height: 100%;
+  background: radial-gradient(#0c0065, #000000);
 }
 
 #solarSystem {
@@ -54,31 +59,18 @@ body {
   --distance: 100px;
   position: absolute;
   animation: orbit2 8s linear infinite;
-  width: 30px;
-  height: 30px;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
 }
 #mercury {
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: 30%;
+  height: 30%;
   background-color: rgb(227, 148, 28);
   border-radius: 50%;
   overflow: hidden;
   box-shadow: 0 0 12px rgb(227, 148, 28);
-
-  transition: 0.5s;
-}
-
-.mercuryText {
-  position: absolute;
-  left: 50px;
-  top: 50px;
-  width: 150px;
-  color: white;
-  padding: 10px;
-  border-radius: 25px;
-  display: none;
-  transition: 2s;
 }
 
 #mercury .cloud1 {
@@ -119,12 +111,13 @@ body {
 
 #mercuryHolder:hover {
   animation-play-state: paused;
+  width: 200%;
+  height: 200%;
 }
 
 #mercuryHolder:hover #mercury {
   cursor: pointer;
-  width: 80px;
-  height: 80px;
+
   box-shadow: 0 0 20px rgb(227, 148, 28);
 }
 
@@ -136,8 +129,8 @@ body {
   --distance: 150px;
   position: absolute;
   animation: orbit2 9s linear infinite;
-  width: 35px;
-  height: 35px;
+  width: 100%;
+  height: 100%;
 }
 #venus {
   position: absolute;
@@ -212,15 +205,4 @@ body {
 
 #venusHolder:hover .venusText {
   display: block;
-}
-
-@keyframes orbit2 {
-  from {
-    transform: rotate(0deg) translateX(var(--distance))
-      translateY(var(--distance)) rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg) translateX(var(--distance))
-      translateY(var(--distance)) rotate(-360deg);
-  }
 }
