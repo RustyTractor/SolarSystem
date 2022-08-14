@@ -1,0 +1,74 @@
+@import "common.scss";
+
+.mercuryHolder {
+  &:hover {
+    animation-play-state: paused;
+    width: 200%;
+    height: 200%;
+  }
+  @include planetHolder();
+  animation: circulationMercury 8s linear infinite;
+}
+.mercuryHolder:hover .mercuryText {
+  display: block;
+}
+
+.mercury {
+  @include planet(rgb(227, 148, 28), rgb(227, 148, 28), 30%);
+}
+
+.mercuryText {
+  @include planetText();
+}
+
+.mercuryClouds {
+  @include planetBlobHolder();
+}
+.mercury .cloud1 {
+  @include planetBlobs(60%, 18%, 30%, 0%, rgb(143, 93, 18));
+}
+.mercury .cloud2 {
+  @include planetBlobs(50%, 20%, -5%, 35%, rgb(143, 93, 18));
+}
+.mercury .cloud3 {
+  @include planetBlobs(25%, 20%, -1%, 50%, rgb(143, 93, 18));
+}
+.mercury .cloud4 {
+  @include planetBlobs(30%, 18%, 45%, 70%, rgb(143, 93, 18));
+}
+.mercury .cloud5 {
+  @include planetBlobs(60%, 18%, -70%, 0%, rgb(143, 93, 18));
+}
+.mercury .cloud6 {
+  @include planetBlobs(50%, 20%, -105%, 35%, rgb(143, 93, 18));
+}
+.mercury .cloud7 {
+  @include planetBlobs(25%, 20%, -101%, 50%, rgb(143, 93, 18));
+}
+.mercury .cloud8 {
+  @include planetBlobs(30%, 18%, -55%, 70%, rgb(143, 93, 18));
+}
+
+.mercury .cloud9 {
+  @include planetBlobs(20%, 10%, 50%, 50%, rgb(117, 76, 16));
+}
+.mercury .cloud10 {
+  @include planetBlobs(20%, 10%, -50%, 50%, rgb(117, 76, 16));
+}
+
+.mercury .cloud11 {
+  @include planetBlobs(20%, 18%, 80%, 80%, rgb(116, 76, 15));
+}
+
+.mercury .cloud12 {
+  @include planetBlobs(20%, 12%, -20%, 80%, rgb(116, 76, 15));
+}
+
+@keyframes circulationMercury {
+  from {
+    transform: rotate(0deg) translateX(80px) translateY(80px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(80px) translateY(80px) rotate(-360deg);
+  }
+}

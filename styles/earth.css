@@ -7,10 +7,11 @@
   }
 }
 .earthHolder {
+  --distance: 200px;
   position: absolute;
   width: 100%;
   height: 100%;
-  animation: circulation 8s linear infinite;
+  animation: circulationEarth 8s linear infinite;
   transition: 0.6s;
 }
 .earthHolder:hover .earthText {
@@ -360,13 +361,13 @@
     transform: translateX(-20%);
   }
 }
-@keyframes circulation {
+@keyframes circulationEarth {
   from {
-    transform: rotate(0deg) translateX(200px) translateY(200px) rotate(0deg);
+    transform: rotate(0deg) translateX(130px) translateY(130px) rotate(0deg);
   }
   to {
-    transform: rotate(360deg) translateX(200px) translateY(200px) rotate(-360deg);
+    transform: rotate(360deg) translateX(130px) translateY(130px) rotate(-360deg);
   }
 }
 
-/*# sourceMappingURL=earthStyle.css.map */
+/*# sourceMappingURL=earth.css.map */

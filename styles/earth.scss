@@ -7,7 +7,7 @@
 
   @include planetHolder();
 
-  animation: circulation 8s linear infinite;
+  animation: circulationEarth 8s linear infinite;
   transition: 0.6s;
 }
 
@@ -135,4 +135,12 @@
   }
 }
 
-@include circulation_mixin(200px);
+@keyframes circulationEarth {
+  from {
+    transform: rotate(0deg) translateX(130px) translateY(130px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(130px) translateY(130px)
+      rotate(-360deg);
+  }
+}
