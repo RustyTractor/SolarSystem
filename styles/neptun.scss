@@ -5,7 +5,7 @@
     animation-play-state: paused;
   }
   @include planetHolder();
-  animation: circulationNeptun 24s linear infinite;
+  animation: circulationNeptun 26s linear infinite;
 }
 
 .neptunHolder:hover .neptun {
@@ -55,9 +55,9 @@
 
 @keyframes circulationNeptun {
   from {
-    transform: rotate(0deg) translateX(600%) translateY(600%) rotate(0deg);
+    transform: rotate(0deg) translateX(650%) translateY(650%) rotate(0deg);
   }
   to {
-    transform: rotate(360deg) translateX(600%) translateY(600%) rotate(-360deg);
+    transform: rotate(360deg) translateX(650%) translateY(650%) rotate(-360deg);
   }
 }
