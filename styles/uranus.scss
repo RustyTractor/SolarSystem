@@ -1,0 +1,63 @@
+@import "common.scss";
+
+.uranusHolder {
+  &:hover {
+    animation-play-state: paused;
+  }
+  @include planetHolder();
+  animation: circulationUranus 22s linear infinite;
+}
+
+.uranusHolder:hover .uranus {
+  width: 120%;
+  height: 120%;
+}
+
+.uranusHolder:hover .uranusText {
+  display: block;
+}
+.uranus {
+  @include planet(rgb(43, 89, 168), rgb(117, 154, 218), 60%);
+}
+
+.uranusText {
+  @include planetText(140%, -50%);
+}
+
+.uranusClouds {
+  @include planetBlobHolder();
+}
+
+.uranus .cloud1 {
+  @include planetBlobs(50%, 15%, 30%, 20%, rgb(101, 152, 242));
+}
+.uranus .cloud2 {
+  @include planetBlobs(50%, 15%, -70%, 20%, rgb(101, 152, 242));
+}
+.uranus .cloud3 {
+  @include planetBlobs(35%, 18%, 0%, 45%, rgb(101, 152, 242));
+}
+.uranus .cloud4 {
+  @include planetBlobs(35%, 18%, -100%, 45%, rgb(101, 152, 242));
+}
+.uranus .cloud5 {
+  @include planetBlobs(20%, 15%, 45%, 55%, rgb(101, 152, 242));
+}
+.uranus .cloud6 {
+  @include planetBlobs(20%, 15%, -55%, 55%, rgb(101, 152, 242));
+}
+.uranus .cloud7 {
+  @include planetBlobs(60%, 12%, -10%, 75%, rgb(101, 152, 242));
+}
+.uranus .cloud8 {
+  @include planetBlobs(60%, 12%, -110%, 75%, rgb(101, 152, 242));
+}
+
+@keyframes circulationUranus {
+  from {
+    transform: rotate(0deg) translateX(550%) translateY(550%) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(550%) translateY(550%) rotate(-360deg);
+  }
+}

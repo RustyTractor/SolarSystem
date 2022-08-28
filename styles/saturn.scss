@@ -1,0 +1,101 @@
+@import "common.scss";
+
+.saturnHolder {
+  &:hover {
+    animation-play-state: paused;
+  }
+  @include planetHolder();
+  animation: circulationSaturn 17s linear infinite;
+}
+
+.saturnHolder:hover .saturn {
+  width: 140%;
+  height: 140%;
+}
+.saturnHolder:hover .saturnRingForward {
+  width: 300%;
+  height: 40%;
+  top: 35%;
+  left: -75%;
+}
+.saturnHolder:hover .saturnRingBackward {
+  width: 300%;
+  height: 40%;
+  top: 75%;
+  left: -78%;
+}
+.saturnHolder:hover .saturnText {
+  display: block;
+}
+
+.saturn {
+  @include planet(rgb(219, 190, 159), rgb(219, 190, 159), 70%);
+  z-index: 1;
+}
+
+.saturnClouds {
+  @include planetBlobHolder();
+  animation-play-state: paused;
+}
+
+.saturnText {
+  @include planetText(150%, 50%);
+}
+
+.saturn .cloud1 {
+  @include planetBlobs(100%, 10%, 0%, 10%, rgb(192, 166, 139));
+}
+.saturn .cloud2 {
+  @include planetBlobs(100%, 8%, 0, 15%, rgb(192, 166, 139));
+}
+.saturn .cloud3 {
+  @include planetBlobs(100%, 12%, 0, 25%, rgb(176, 153, 128));
+}
+.saturn .cloud4 {
+  @include planetBlobs(100%, 5%, 0%, 40%, rgb(192, 166, 139));
+}
+.saturn .cloud5 {
+  @include planetBlobs(100%, 13%, 0%, 50%, rgb(191, 155, 117));
+}
+.saturn .cloud6 {
+  @include planetBlobs(100%, 7%, 0, 65%, rgb(192, 166, 139));
+}
+.saturn .cloud7 {
+  @include planetBlobs(100%, 10%, 0%, 75%, rgb(192, 166, 139));
+}
+
+.saturnRingForward {
+  position: absolute;
+  top: 20%;
+  left: -55%;
+  width: 175%;
+  height: 18%;
+  transition: 0.6s;
+  transform: rotate(10deg);
+  background: rgb(182, 156, 129);
+  border-top-left-radius: 120%;
+  border-top-right-radius: 120%;
+}
+
+.saturnRingBackward {
+  position: absolute;
+  background-color: rgb(152, 132, 108);
+  width: 175%;
+  height: 18%;
+  z-index: 3;
+  top: 38%;
+  left: -57%;
+  transition: 0.6s;
+  transform: translateY(-50%) rotate(10deg);
+  border-bottom-left-radius: 120%;
+  border-bottom-right-radius: 120%;
+}
+
+@keyframes circulationSaturn {
+  from {
+    transform: rotate(0deg) translateX(450%) translateY(450%) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(450%) translateY(450%) rotate(-360deg);
+  }
+}

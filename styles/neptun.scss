@@ -1,0 +1,63 @@
+@import "common.scss";
+
+.neptunHolder {
+  &:hover {
+    animation-play-state: paused;
+  }
+  @include planetHolder();
+  animation: circulationNeptun 24s linear infinite;
+}
+
+.neptunHolder:hover .neptun {
+  width: 120%;
+  height: 120%;
+}
+
+.neptunHolder:hover .neptunText {
+  display: block;
+}
+.neptun {
+  @include planet(rgb(33, 68, 129), rgb(52, 93, 164), 55%);
+}
+
+.neptunText {
+  @include planetText(140%, -50%);
+}
+
+.neptunClouds {
+  @include planetBlobHolder();
+}
+
+.neptun .cloud1 {
+  @include planetBlobs(25%, 12%, 0%, 15%, rgb(26, 92, 205));
+}
+.neptun .cloud2 {
+  @include planetBlobs(25%, 12%, -100%, 15%, rgb(26, 92, 205));
+}
+.neptun .cloud3 {
+  @include planetBlobs(45%, 20%, 20%, 45%, rgb(26, 92, 205));
+}
+.neptun .cloud4 {
+  @include planetBlobs(45%, 20%, -80%, 45%, rgb(26, 92, 205));
+}
+.neptun .cloud5 {
+  @include planetBlobs(20%, 15%, 45%, 55%, rgb(26, 92, 205));
+}
+.neptun .cloud6 {
+  @include planetBlobs(20%, 15%, -55%, 55%, rgb(26, 92, 205));
+}
+.neptun .cloud7 {
+  @include planetBlobs(60%, 15%, -10%, 80%, rgb(26, 92, 205));
+}
+.neptun .cloud8 {
+  @include planetBlobs(60%, 15%, -110%, 80%, rgb(26, 92, 205));
+}
+
+@keyframes circulationNeptun {
+  from {
+    transform: rotate(0deg) translateX(600%) translateY(600%) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(600%) translateY(600%) rotate(-360deg);
+  }
+}

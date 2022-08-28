@@ -16,8 +16,8 @@
         $limit: 3,
       ) +
       px;
-    top: random($limit: 1000) + px;
-    left: random($limit: 2000) + px;
+    top: random($limit: 1500) + px;
+    left: random($limit: 3000) + px;
     height: $randomSize;
     width: $randomSize;
   }

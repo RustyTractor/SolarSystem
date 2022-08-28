@@ -1,0 +1,83 @@
+@import "common.scss";
+.jupiterHolder {
+  &:hover {
+    animation-play-state: paused;
+  }
+  @include planetHolder();
+  animation: circulationJupiter 14s linear infinite;
+}
+
+.jupiterHolder:hover .jupiterText {
+  display: block;
+}
+
+.jupiterHolder:hover .jupiter {
+  width: 150%;
+  height: 150%;
+}
+
+.jupiter {
+  @include planet(rgb(196, 164, 116), rgb(197, 177, 148), 80%);
+}
+
+.jupiterText {
+  @include planetText(150%, -30%);
+}
+
+.jupiterClouds {
+  @include planetBlobHolder();
+}
+
+.jupiter .cloud1 {
+  @include planetBlobs(80%, 10%, 0, 5%, rgb(163, 131, 87));
+}
+.jupiter .cloud2 {
+  @include planetBlobs(80%, 10%, -100%, 5%, rgb(163, 131, 87));
+}
+
+.jupiter .cloud3 {
+  @include planetBlobs(95%, 12%, 5%, 25%, rgb(188, 128, 44));
+}
+.jupiter .cloud4 {
+  @include planetBlobs(95%, 12%, -95%, 25%, rgb(188, 128, 44));
+}
+.jupiter .cloud5 {
+  @include planetBlobs(80%, 10%, 25%, 50%, rgb(163, 131, 87));
+}
+.jupiter .cloud6 {
+  @include planetBlobs(80%, 10%, -75%, 50%, rgb(163, 131, 87));
+}
+.jupiter .cloud7 {
+  @include planetBlobs(60%, 13%, 40%, 80%, rgb(143, 115, 77));
+}
+.jupiter .cloud8 {
+  @include planetBlobs(60%, 13%, -60%, 80%, rgb(143, 115, 77));
+}
+
+.jupiter .cloud9 {
+  @include planetBlobs(30%, 25%, 20%, 33%, rgb(196, 164, 116));
+}
+.jupiter .cloud10 {
+  @include planetBlobs(30%, 25%, -80%, 33%, rgb(196, 164, 116));
+}
+.jupiter .cloud11 {
+  @include planetBlobs(20%, 15%, 25%, 36%, rgb(171, 143, 102));
+}
+.jupiter .cloud12 {
+  @include planetBlobs(20%, 15%, -75%, 36%, rgb(171, 143, 102));
+}
+.jupiter .cloud13 {
+  @include planetBlobs(10%, 7%, 30%, 40%, rgb(133, 112, 79));
+}
+.jupiter .cloud14 {
+  @include planetBlobs(10%, 7%, -70%, 40%, rgb(133, 112, 79));
+}
+
+@keyframes circulationJupiter {
+  from {
+    transform: rotate(0deg) translateX(350%) translateY(350%) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(350%) translateY(350%) rotate(-360deg);
+  }
+}
